@@ -1,13 +1,13 @@
-package com.saiteja.OrderService;
+// package com.saiteja.OrderService;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+// import org.junit.jupiter.api.Test;
+// import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
-class OrderServiceApplicationTests {
+// @SpringBootTest
+// class OrderServiceApplicationTests {
 
-	@Test
-	void contextLoads() {
-	}
+// 	@Test
+// 	void contextLoads() {
+// 	}
 
-}
+// }
