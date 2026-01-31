@@ -11,7 +11,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/order")
+@RequestMapping("/api/v1/order")
 @Slf4j
 public class OrderController {
 
@@ -19,10 +19,10 @@ public class OrderController {
     private OrderService orderService;
 
     @PostMapping("/placeOrder")
-    public ResponseEntity<Long> placeOrder(@RequestBody OrderRequest orderRequest) {
-        long orderId = orderService.placeOrder(orderRequest);
-        log.info("Order Id: {}", orderId);
-        return new ResponseEntity<>(orderId, HttpStatus.CREATED);
+    public ResponseEntity<String> placeOrder(@RequestBody OrderRequest orderRequest) {
+        orderService.placeOrder(orderRequest);
+        log.info("Order placed successfully for product id: {}", orderRequest.getProductId());
+        return new ResponseEntity<>("Order Successfully Placed", HttpStatus.CREATED);
     }
 
     @GetMapping("/{orderId}")
