@@ -96,7 +96,7 @@ public class OrderServiceImpl implements OrderService {
         //ProductResponse productResponse = restTemplate.getForObject(productServiceUrl + order.getProductId(), ProductResponse.class);
 
         log.info("Getting payment information from the payment service");
-        PaymentResponse paymentResponse = restTemplate.getForObject("http://PAYMENT-SERVICE/payment/" + order.getId(), PaymentResponse.class);
+        PaymentResponse paymentResponse = restTemplate.getForObject("http://PAYMENT-SERVICE/api/v1/payment/" + order.getId(), PaymentResponse.class);
         //PaymentResponse paymentResponse = restTemplate.getForObject(paymentServiceUrl + order.getId(), PaymentResponse.class);
 
 
